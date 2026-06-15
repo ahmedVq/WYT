@@ -76,6 +76,7 @@ export default function Studio() {
               ref={railRef}
               onPointerDown={onPointerDown}
               onWheel={onWheel}
+              style={{ touchAction: 'pan-x' }}
             >
               {RAIL_IMAGES.map((img, i) => (
                 <div className="rail-item" key={i}>

@@ -101,7 +101,7 @@ export default function Work() {
 
         {/* Carousel */}
         <div className="car reveal" data-d="1" aria-label="Featured projects">
-          <div className="car__viewport" ref={vpRef}>
+          <div className="car__viewport" ref={vpRef} style={{ touchAction: 'pan-y' }}>
             <div className="car__track" ref={trackRef} style={{ transform: 'translateX(0%)' }}>
               {featured.map((p, i) => (
                 <div
