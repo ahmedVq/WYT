@@ -15,6 +15,7 @@ import Consult         from '../components/Consult';
 import Contact         from '../components/Contact';
 import Footer          from '../components/Footer';
 import ProjectDetail   from '../components/ProjectDetail';
+import Loader          from '../components/Loader';
 
 export default function Home() {
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Home() {
 
   return (
     <ProjectProvider>
+      <Loader />
       <Nav />
       <main id="top">
         <Hero />
