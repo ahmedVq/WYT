@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WYT — Brand Deck</title>
+<style>
+  :root{
+    --paper:#ffffff;
+    --parchment:#ece8d0;
+    --graphite:#231f20;
+    --ink:#0a0a0a;
+    --line:rgba(35,31,32,.16);
+    --line-dark:rgba(236,232,208,.18);
+    --font:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  deck-stage:not(:defined){visibility:hidden;}
+  body{font-family:var(--font);background:#000;}
+
+  section{
+    font-family:var(--font);
+    background:var(--parchment);
+    color:var(--graphite);
+    padding:56px 72px;
+    display:flex;flex-direction:column;
+  }
+  section.dark{background:var(--ink);color:var(--parchment);}
+  section.ink{background:var(--ink);color:var(--parchment);}
+
+  .anno{font-size:13px;letter-spacing:.28em;text-transform:uppercase;font-weight:bold;}
+  .dim{opacity:.55;}
+
+  /* top + bottom running annotations */
+  .top{display:flex;justify-content:space-between;align-items:flex-start;flex:none;}
+  .bottom{display:flex;justify-content:space-between;align-items:flex-end;flex:none;margin-top:auto;}
+  .body{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;padding:30px 0;}
+
+  /* ---- cover ---- */
+  .cover-mark{font-weight:bold;font-size:300px;line-height:.78;letter-spacing:-.01em;}
+  .cover-rule{height:1px;background:var(--line-dark);margin:30px 0 26px;}
+  .cover-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;}
+  .cover-tag{font-weight:bold;font-size:40px;line-height:1.06;}
+  .cover-desc{max-width:46ch;font-size:15px;line-height:1.7;opacity:.72;font-weight:bold;}
+
+  .sec-head{display:flex;align-items:baseline;gap:16px;flex:none;}
+  .sec-num{font-size:13px;letter-spacing:.22em;font-weight:bold;opacity:.55;}
+  .sec-title{font-size:15px;letter-spacing:.28em;text-transform:uppercase;font-weight:bold;}
+
+  /* ---- logo ---- */
+  .logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+  .logo-card{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;border:1px solid var(--line);}
+  .logo-card .lab{position:absolute;left:12px;bottom:10px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:bold;opacity:.5;}
+  .logo-card.on-ink{background:var(--ink);color:var(--parchment);border-color:transparent;}
+  .logo-card.on-graphite{background:var(--graphite);color:var(--parchment);border-color:transparent;}
+  .logo-card.on-paper{background:var(--paper);color:var(--ink);}
+  .card-mark{font-weight:bold;font-size:54px;}
+  .card-lockup{font-weight:bold;font-size:18px;letter-spacing:.03em;}
+  .logo-note{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px;}
+  .logo-note div{border:1px solid var(--line);padding:18px 22px;}
+  .logo-note h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55;font-weight:bold;margin-bottom:10px;}
+  .logo-note .lk{font-weight:bold;font-size:22px;letter-spacing:.03em;margin-bottom:6px;}
+  .logo-note p{font-size:13px;line-height:1.6;opacity:.8;}
+
+  /* ---- colour ---- */
+  .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .swatch .chip{height:200px;border:1px solid var(--line);display:flex;align-items:flex-end;padding:16px;}
+  .swatch .chip .pct{font-size:11px;letter-spacing:.16em;font-weight:bold;text-transform:uppercase;}
+  .swatch .name{font-weight:bold;font-size:16px;margin:14px 0 8px;}
+  .swatch .val{font-size:12px;letter-spacing:.04em;display:flex;justify-content:space-between;padding:5px 0;border-top:1px solid var(--line);opacity:.85;}
+  .swatch .val span:first-child{opacity:.5;}
+  .ratio{margin-top:26px;display:flex;height:46px;border:1px solid var(--line);}
+  .ratio div{display:flex;align-items:center;padding:0 14px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:bold;}
+
+  /* ---- type ---- */
+  .type-spec{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center;}
+  .type-anatomy{border:1px solid var(--line-dark);padding:34px;}
+  .type-anatomy .big{font-weight:bold;font-size:150px;line-height:.85;letter-spacing:-.01em;}
+  .type-anatomy .small{font-size:28px;margin-top:6px;}
+  .type-facts dt{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.55;font-weight:bold;margin-top:18px;}
+  .type-facts dd{font-size:15px;line-height:1.55;margin-top:5px;}
+  .type-facts dt:first-child{margin-top:0;}
+  .scale{margin-top:24px;}
+  .scale-row{display:flex;align-items:baseline;gap:22px;padding:12px 0;border-top:1px solid var(--line-dark);}
+  .scale-row .tag{font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;font-weight:bold;width:150px;flex:none;}
+  .scale-row .sample{font-weight:bold;}
+
+  /* ---- motifs ---- */
+  .motif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .motif{border:1px solid var(--line);padding:30px 28px;min-height:280px;display:flex;flex-direction:column;}
+  .motif .demo{flex:1;display:flex;align-items:center;justify-content:center;font-weight:bold;}
+  .motif .demo .lg{font-size:54px;}
+  .motif h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.55;font-weight:bold;margin-bottom:6px;}
+  .motif p{font-size:13px;line-height:1.55;opacity:.8;}
+
+  /* ---- positioning ---- */
+  .voice{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
+  .voice .statement{font-weight:bold;font-size:40px;line-height:1.14;letter-spacing:-.01em;}
+  .voice .statement em{font-style:normal;opacity:.45;}
+  .voice .cols{display:grid;gap:24px;}
+  .voice .cols h5{font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.55;font-weight:bold;margin-bottom:8px;}
+  .voice .cols p{font-size:14px;line-height:1.65;opacity:.85;}
+
+  /* ---- work ---- */
+  .work{flex:1;display:flex;flex-direction:column;min-height:0;}
+  .work figure{flex:1;border:1px solid var(--line-dark);overflow:hidden;display:flex;}
+  .work img{width:100%;height:100%;object-fit:cover;display:block;}
+  .work figcaption{display:flex;justify-content:space-between;padding:14px 4px 0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:bold;opacity:.6;}
+
+  /* ---- thank you ---- */
+  .ty-body{flex:1;display:flex;flex-direction:column;justify-content:center;}
+  .ty-mark{font-weight:bold;font-size:180px;line-height:.8;}
+</style>
+</head>
+<body>
+
+<deck-stage width="1280" height="720">
+
+  <!-- 1 · COVER -->
+  <section class="ink" data-label="Cover">
+    <div class="top">
+      <div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div>
+      <div class="anno dim">[&nbsp;2025&nbsp;]</div>
+    </div>
+    <div class="body">
+      <div class="anno dim" style="margin-bottom:22px;">// BRAND EXTRACTION</div>
+      <div class="cover-mark">WYT</div>
+      <div class="cover-rule"></div>
+      <div class="cover-meta">
+        <div class="cover-tag">Construction &amp;<br>Fine Finishes</div>
+        <div class="cover-desc">The visual system distilled from the WYT&nbsp;×&nbsp;JETOUR showroom proposal — wordmark, palette, typography and the bracket-and-slash annotation language.</div>
+      </div>
+    </div>
+    <div class="bottom"><div></div><div class="anno dim">ALL DESIGN COPYRIGHTS RESERVED · ©</div></div>
+  </section>
+
+  <!-- 2 · WORDMARK -->
+  <section data-label="Wordmark">
+    <div class="top"><div class="sec-head"><span class="sec-num">01 //</span><span class="sec-title">Wordmark &amp; Lockup</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body">
+      <div class="logo-grid">
+        <div class="logo-card on-ink"><span class="card-mark">WYT</span><span class="lab">Primary · ink</span></div>
+        <div class="logo-card on-paper"><span class="card-mark">WYT</span><span class="lab">Primary · paper</span></div>
+        <div class="logo-card on-graphite"><span class="card-lockup">[ WYT DESIGNS ]</span><span class="lab">Lockup · graphite</span></div>
+        <div class="logo-card on-paper"><span class="card-lockup">[ WYT DESIGNS ]</span><span class="lab">Lockup · paper</span></div>
+      </div>
+      <div class="logo-note">
+        <div><h4>Primary mark</h4><div class="lk">WYT</div><p>Three bold capitals, near-zero tracking. Used large and alone as the signature element.</p></div>
+        <div><h4>Bracketed lockup</h4><div class="lk">[ WYT DESIGNS ]</div><p>The descriptor form. Square brackets frame the full name as a running header / sign-off.</p></div>
+      </div>
+    </div>
+    <div class="bottom"><div class="anno dim">// CONSTRUCTION &amp; FINE FINISHES</div><div></div></div>
+  </section>
+
+  <!-- 3 · COLOUR -->
+  <section data-label="Colour">
+    <div class="top"><div class="sec-head"><span class="sec-num">02 //</span><span class="sec-title">Colour</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body">
+      <div class="swatches">
+        <div class="swatch"><div class="chip" style="background:#0a0a0a;color:#ece8d0;"><span class="pct">Ink</span></div><div class="name">Ink Black</div><div class="val"><span>HEX</span><span>#0A0A0A</span></div><div class="val"><span>RGB</span><span>2·3·2</span></div><div class="val"><span>ROLE</span><span>Ground</span></div></div>
+        <div class="swatch"><div class="chip" style="background:#231f20;color:#ece8d0;"><span class="pct">Graphite</span></div><div class="name">Graphite</div><div class="val"><span>HEX</span><span>#231F20</span></div><div class="val"><span>RGB</span><span>35·31·32</span></div><div class="val"><span>ROLE</span><span>Structure</span></div></div>
+        <div class="swatch"><div class="chip" style="background:#ece8d0;color:#231f20;"><span class="pct">Parchment</span></div><div class="name">Parchment</div><div class="val"><span>HEX</span><span>#ECE8D0</span></div><div class="val"><span>RGB</span><span>236·232·208</span></div><div class="val"><span>ROLE</span><span>Signature</span></div></div>
+        <div class="swatch"><div class="chip" style="background:#ffffff;color:#231f20;"><span class="pct">Paper</span></div><div class="name">Paper White</div><div class="val"><span>HEX</span><span>#FFFFFF</span></div><div class="val"><span>RGB</span><span>255·255·255</span></div><div class="val"><span>ROLE</span><span>Surface</span></div></div>
+      </div>
+      <div class="ratio">
+        <div style="background:#0a0a0a;color:#ece8d0;flex:6;">Ink · ground</div>
+        <div style="background:#ece8d0;color:#231f20;flex:3;">Parchment</div>
+        <div style="background:#231f20;color:#ece8d0;flex:2;">Graphite</div>
+        <div style="background:#ffffff;color:#231f20;flex:1;border-left:1px solid var(--line);">Paper</div>
+      </div>
+    </div>
+    <div class="bottom"><div class="anno dim">// SAMPLED FROM SOURCE FILE</div><div></div></div>
+  </section>
+
+  <!-- 4 · TYPOGRAPHY -->
+  <section class="dark" data-label="Typography">
+    <div class="top"><div class="sec-head"><span class="sec-num" style="opacity:.6;">03 //</span><span class="sec-title">Typography</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body">
+      <div class="type-spec">
+        <div class="type-anatomy"><div class="big">Aa</div><div class="small">WYTabcg 0123 [ // ]</div></div>
+        <dl class="type-facts">
+          <dt>Typeface</dt><dd>Trebuchet MS Bold — the single embedded face, a humanist sans (Franklin Gothic family referenced as source).</dd>
+          <dt>System</dt><dd>One weight does all the work. Hierarchy comes from scale, case and letter-spacing — never a second typeface.</dd>
+          <dt>Labels</dt><dd>All-caps, wide tracking (~0.25em), set small — the technical register of the brand.</dd>
+        </dl>
+      </div>
+      <div class="scale">
+        <div class="scale-row"><span class="tag">Display / Mark</span><span class="sample" style="font-size:52px;">WYT</span></div>
+        <div class="scale-row"><span class="tag">Heading</span><span class="sample" style="font-size:32px;">Fine Finishes</span></div>
+        <div class="scale-row"><span class="tag">Section · // prefix</span><span class="sample" style="font-size:20px;">// DESIGN LAYOUT</span></div>
+        <div class="scale-row"><span class="tag">Label · [ ] caps</span><span class="sample" style="font-size:13px;letter-spacing:.28em;">[ WYT DESIGNS ]</span></div>
+      </div>
+    </div>
+    <div class="bottom"><div class="anno dim">// ONE FACE, MANY VOICES</div><div></div></div>
+  </section>
+
+  <!-- 5 · ANNOTATION -->
+  <section data-label="Annotation">
+    <div class="top"><div class="sec-head"><span class="sec-num">04 //</span><span class="sec-title">Annotation System</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body">
+      <div class="motif-grid">
+        <div class="motif"><div class="demo"><span class="lg">[ &nbsp; ]</span></div><h4>Brackets</h4><p>Square brackets frame names &amp; meta — [ WYT&nbsp;DESIGNS ], [ 2025 ], [ CONTENT ]. They sit in the corners of the page.</p></div>
+        <div class="motif"><div class="demo"><span class="lg">//</span></div><h4>Double Slash</h4><p>A leading // marks section titles — // DESIGN&nbsp;LAYOUT, // THANK&nbsp;YOU. Reads like a code comment.</p></div>
+        <div class="motif"><div class="demo"><span style="font-size:13px;letter-spacing:.22em;text-align:center;font-weight:bold;opacity:.75;line-height:1.7;">ALL DESIGN<br>COPYRIGHTS<br>RESERVED · ©</span></div><h4>Sign-off Line</h4><p>A small all-caps copyright rule anchors the foot of every layout — quiet and consistent.</p></div>
+      </div>
+    </div>
+    <div class="bottom"><div class="anno dim">// THE CONNECTIVE TISSUE</div><div></div></div>
+  </section>
+
+  <!-- 6 · POSITIONING -->
+  <section class="dark" data-label="Positioning">
+    <div class="top"><div class="sec-head"><span class="sec-num" style="opacity:.6;">05 //</span><span class="sec-title">Positioning</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body">
+      <div class="voice">
+        <div class="statement">Restrained, architectural, <em>built to a millimetre.</em> Warm neutrals over hard black.</div>
+        <div class="cols">
+          <div><h5>What it is</h5><p>A construction &amp; fine-finishes practice that presents its work like architecture monographs — generous space, precise labelling, photoreal renders left to speak for themselves.</p></div>
+          <div><h5>Tone</h5><p>Confident and spare. Technical annotation rather than marketing copy. Nothing decorative that isn't structural.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom"><div class="anno dim">// HOW IT SHOULD FEEL</div><div></div></div>
+  </section>
+
+  <!-- 7 · WORK -->
+  <section data-label="Work">
+    <div class="top"><div class="sec-head"><span class="sec-num">06 //</span><span class="sec-title">Work Sample</span></div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="body" style="padding:24px 0 0;">
+      <div class="work">
+        <figure><img src="assets/wyt-work-jetour.png" alt="JETOUR showroom interior designed by WYT"></figure>
+        <figcaption><span>// JETOUR Showroom · Schematic Layout</span><span>[ WYT DESIGNS ]</span></figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · THANK YOU -->
+  <section class="ink" data-label="Thank You">
+    <div class="top"><div class="anno dim">// THANK YOU</div><div class="anno dim">[&nbsp;WYT&nbsp;DESIGNS&nbsp;]</div></div>
+    <div class="ty-body"><div class="ty-mark">WYT</div></div>
+    <div class="bottom">
+      <div class="anno dim">CONSTRUCTION &amp; FINE FINISHES</div>
+      <div class="anno dim">ALL DESIGN COPYRIGHTS RESERVED · ©</div>
+    </div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/003-11c64886-c460-44fe-ba00-194cd819f980.jpg >> scraps/pf/a40/01.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/007-2813c77e-bf6c-4859-8366-66d9e5db95fe.jpg >> scraps/pf/a40/02.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/010-36431b1b-8cf4-433d-ae60-1a4f576c5546.jpg >> scraps/pf/a40/03.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/012-4426640c-0eed-4ae3-a0ce-f4ecaed7f205.jpg >> scraps/pf/a40/04.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/014-55a4f1ee-0779-47b4-abf1-57e68ee4f840.jpg >> scraps/pf/a40/05.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/016-570acff0-3f6f-4755-8808-e4c3ec88190e.jpg >> scraps/pf/a40/06.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/017-60f3f9c4-6c86-41d5-b505-10526b332a80.jpg >> scraps/pf/a40/07.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/024-855efb10-fc74-4cb8-af71-f4a653aaa117.jpg >> scraps/pf/a40/08.jpg
+portfolio-images/01 A-40 Summer House 2023 Almaza bay/025-938f2fd6-8813-41dd-8de3-a92b116bcfea.jpg >> scraps/pf/a40/09.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/003-0350eada-c052-45a0-b554-3bf0c916a061.jpg >> scraps/pf/b34/01.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/004-06fed2bd-6e2a-4392-96c2-0aae53bf37d0.jpg >> scraps/pf/b34/02.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/005-08404857-a633-469d-8211-0038e42a7092.jpg >> scraps/pf/b34/03.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/006-107a92dd-adf5-4ffe-a710-74980ae91dfa.jpg >> scraps/pf/b34/04.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/007-1313e1b4-f269-4f10-a406-8331499ac8a3.jpg >> scraps/pf/b34/05.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/009-1b2ac373-88b4-4f50-8eef-3bf84f6e6ea6.jpg >> scraps/pf/b34/06.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/012-23718e9b-bebe-4472-bede-996b03337c5a.png >> scraps/pf/b34/07.png
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/014-3fb7cfa0-f69a-4d1e-8f4e-036a2d4e5db7.jpg >> scraps/pf/b34/08.jpg
+portfolio-images/02 B-34 Summer House 2024 Almaza bay/018-58f3e02c-96d7-4dd5-b2a0-6a04719a6ab9.jpg >> scraps/pf/b34/09.jpg
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/003-08a2721d-4ec1-40db-a067-a5449952fed1.png >> scraps/pf/riva/01.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/005-19b6f8a7-0ab5-434f-ab57-0a646a352a09.png >> scraps/pf/riva/02.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/008-29b5d5a6-ec53-482a-a322-d085660446b8.png >> scraps/pf/riva/03.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/011-40c2efd6-47c0-40ed-b0ac-69b74bd75e42.png >> scraps/pf/riva/04.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/013-460d6f93-fa3b-496a-9082-89cd2c17210f.jpg >> scraps/pf/riva/05.jpg
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/014-49126ac2-e9ba-4781-88ce-258d9b1a1313.png >> scraps/pf/riva/06.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/017-5dcf46af-d7b3-4a50-8519-5eca5f9e333f.png >> scraps/pf/riva/07.png
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/018-6215e8cb-8ca9-4570-a263-b0c61b479c65.jpg >> scraps/pf/riva/08.jpg
+portfolio-images/03 Riva Golf Summer House 2024 Marassi/019-63951c19-ad16-498c-924c-de5f7e348990.png >> scraps/pf/riva/09.png
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/003-01cf361c-6a47-4e60-9182-cbe68af2482d.jpg >> scraps/pf/v166/01.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/005-0aaa66ce-c424-45f0-ae13-3fe27973e262.jpg >> scraps/pf/v166/02.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/007-19400cd0-01ce-4242-b76e-c73a22122ff9.jpg >> scraps/pf/v166/03.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/008-f0dfb49093945243.jpg >> scraps/pf/v166/04.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/011-285ce6a5-df59-4202-b1cc-bb8c44139f6d.jpg >> scraps/pf/v166/05.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/014-36b809bf-8ffb-42aa-bc10-3768c60cda36.jpg >> scraps/pf/v166/06.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/015-4246c0d0-f78b-47e9-977f-4032c1998697.jpg >> scraps/pf/v166/07.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/018-54d622f3-2777-43b0-a271-3e0d98ac068f.jpg >> scraps/pf/v166/08.jpg
+portfolio-images/04 V-166 Summer House 2022 Caesar bay/020-730ac96c-fe17-4aeb-babe-73d1bc1b50e8.jpg >> scraps/pf/v166/09.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/004-1547b95c-df38-43b3-8952-6f04b3735a48.jpg >> scraps/pf/r566/01.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/006-208e92b7-320d-45e4-9c79-6ea5e909e704.jpg >> scraps/pf/r566/02.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/007-f9ff795e3704635b.jpg >> scraps/pf/r566/03.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/011-3aa87708-69d2-4293-abb3-bc761a9c73a8.jpg >> scraps/pf/r566/04.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/015-682cb8b3-9052-409e-8842-6d50a2c392aa.jpg >> scraps/pf/r566/05.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/016-690b65b4-c438-4a37-8afe-412f416696cc.jpg >> scraps/pf/r566/06.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/017-70687f25-5ad4-4b5e-9218-00ff7e213a7c.jpg >> scraps/pf/r566/07.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/022-9af92de5-eccf-4c02-9585-059b1be54f85.jpg >> scraps/pf/r566/08.jpg
+portfolio-images/05 R5-66 Residential House 2021 New Giza/023-9bc7244f-37f5-4d16-9ec3-0033aa68ba59.jpg >> scraps/pf/r566/09.jpg
+portfolio-images/06 Pier 88 2024 Gouna/003-02d9987e-b7b2-4cd0-bca7-a56eed0c1db9.jpg >> scraps/pf/pier88/01.jpg
+portfolio-images/06 Pier 88 2024 Gouna/005-1804faf1-527a-4e1d-b57f-a74f1336a66f.jpg >> scraps/pf/pier88/02.jpg
+portfolio-images/06 Pier 88 2024 Gouna/006-192162ac-9933-4a43-8a29-7b92f9a5eccb.jpg >> scraps/pf/pier88/03.jpg
+portfolio-images/06 Pier 88 2024 Gouna/007-1d9e4e20-81eb-4943-9989-03e385e61b08.jpg >> scraps/pf/pier88/04.jpg
+portfolio-images/06 Pier 88 2024 Gouna/010-22c7ecbd-f121-4647-9d1e-d00a10af3dcf.jpg >> scraps/pf/pier88/05.jpg
+portfolio-images/06 Pier 88 2024 Gouna/012-2f9f7acd-986e-4266-9bf9-d106f17ac563.jpg >> scraps/pf/pier88/06.jpg
+portfolio-images/06 Pier 88 2024 Gouna/014-3bfb490f-4ddc-47ae-9420-1078783c5ec1.jpg >> scraps/pf/pier88/07.jpg
+portfolio-images/06 Pier 88 2024 Gouna/015-3e37ebab-126e-44f4-929a-7affc8548b75.jpg >> scraps/pf/pier88/08.jpg
+portfolio-images/06 Pier 88 2024 Gouna/017-44b215a6-8c9c-40d7-82b2-631109f5e28d.jpg >> scraps/pf/pier88/09.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/003-10f245d7-67e4-4ffb-9dd0-59d2faad4fa7.jpg >> scraps/pf/museum/01.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/005-1748ac76-4450-46d2-a353-0ab587483087.jpg >> scraps/pf/museum/02.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/006-1e152fed-156a-4d35-a121-1cd980f72ea2.jpg >> scraps/pf/museum/03.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/007-4aaf603e3c7af3a8.jpg >> scraps/pf/museum/04.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/009-2b083dbf-30d7-41ff-a200-95226fcca9ae.jpg >> scraps/pf/museum/05.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/011-2e4b0280-69e7-46ec-ab7b-e31934ef11c1.jpg >> scraps/pf/museum/06.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/013-35b937f6-2b5c-4e8a-9a6a-4a7ae6fc46ee.jpg >> scraps/pf/museum/07.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/014-35f999c8-d5a4-43b6-b689-5d236332f22b.jpg >> scraps/pf/museum/08.jpg
+portfolio-images/07 Egyptian Museum 2023 Tahrir Square/017-525e4faa-a7ef-4e2e-997b-f8f2b042c1ec.jpg >> scraps/pf/museum/09.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/003-099f81e4-f95a-41e3-9de4-e6bc81f22b5f.jpg >> scraps/pf/deka/01.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/004-755bda7497598ec7.jpg >> scraps/pf/deka/02.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/006-0edaa093-4326-4f01-80bb-9e2bfa6e0fe6.jpg >> scraps/pf/deka/03.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/007-ddccb16c355b8e01.jpg >> scraps/pf/deka/04.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/010-1b5985c5-6e59-4aea-8014-c72d8666abb7.jpg >> scraps/pf/deka/05.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/014-29bb2bf4-09b9-4bbc-ac52-764351d48958.jpg >> scraps/pf/deka/06.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/018-402d49fc-772b-44ac-9a80-62e38374845c.jpg >> scraps/pf/deka/07.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/022-539c7b60-03cc-421b-9efd-16c0fcc5aba1.jpg >> scraps/pf/deka/08.jpg
+portfolio-images/08 Deka 2022 Trivium Mall/024-5e818e30-2a79-4e23-9001-fcac6e3fcf16.jpg >> scraps/pf/deka/09.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/003-05d81e8b-9a93-4940-b469-4897a3bbb4c4.jpg >> scraps/pf/nest/01.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/007-2a896fdf-c6d1-47cf-af30-3c830e287192.jpg >> scraps/pf/nest/02.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/008-96d351138a7ea21a.jpg >> scraps/pf/nest/03.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/011-37769910-2c87-499f-9455-adc1e3ef5438.jpg >> scraps/pf/nest/04.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/012-3de3555d-4c4a-4677-a493-ce6500ed8380.jpg >> scraps/pf/nest/05.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/016-57e48bec-cbb3-465d-8f97-16f449be2080.jpg >> scraps/pf/nest/06.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/018-70218d3b-b399-47b9-beef-3bfee98325bd.jpg >> scraps/pf/nest/07.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/020-730bb6b3-b665-42e0-ac4d-b096c2cf1657.jpg >> scraps/pf/nest/08.jpg
+portfolio-images/09 Nest 2021 SODIC STRIP/024-85788999-6269-427c-80e3-4c78b06c4288.jpg >> scraps/pf/nest/09.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/001-0106b936-9a92-4d70-a0e8-bc35f2425b2f.jpg >> scraps/pf/b112/01.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/004-05185105-4214-4291-8154-567a02c2382b.jpg >> scraps/pf/b112/02.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/006-155fb397-5904-49b3-9517-739fc492ee6d.jpg >> scraps/pf/b112/03.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/007-1d40af96-1275-4c1d-b342-e4dfb19f418e.jpg >> scraps/pf/b112/04.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/014-4578528f-8300-4977-af62-719903997c66.jpg >> scraps/pf/b112/05.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/020-7de32944-29d6-4184-aae3-d7240d41b3b0.jpg >> scraps/pf/b112/06.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/023-86ad9581-c342-4135-859a-2f7a637e73f8.jpg >> scraps/pf/b112/07.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/024-673b53da631d5965.jpg >> scraps/pf/b112/08.jpg
+portfolio-images/10 B 1-12 Residential Appartment 2018 West Town Sodic/030-ca643a6d-10e8-4fc6-97d4-4b29d08dfd13.jpg >> scraps/pf/b112/09.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/003-12b5a242-f508-4100-a1d9-03065e0a708f.jpg >> scraps/pf/sd1/01.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/005-1aa4eee0-9b52-4e92-861a-14878586918e.jpg >> scraps/pf/sd1/02.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/010-3c4fb245-f770-47ee-b04a-3536a82a5708.jpg >> scraps/pf/sd1/03.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/012-53a1c5da-7efa-4ee5-bdb0-a85f2270958c.jpg >> scraps/pf/sd1/04.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/014-5b2432db-26b2-4cde-bc4c-fec7373133a4.jpg >> scraps/pf/sd1/05.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/015-5d4220db-eabb-4a0c-be90-245ad8e5625c.jpg >> scraps/pf/sd1/06.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/016-6ebf9ac6-f073-47cc-a6b2-f321f61901c7.jpg >> scraps/pf/sd1/07.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/017-b71de623f8694529.jpg >> scraps/pf/sd1/08.jpg
+portfolio-images/11 SD-1 Penthouse 2019 El Patio/022-9cf1def3-993c-41c4-9972-d4afc41cdb98.jpg >> scraps/pf/sd1/09.jpg

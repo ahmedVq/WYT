@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WYT — Design Review</title>
+<style>
+  html,body{margin:0;padding:0;background:#f0eee9;}
+  *{box-sizing:border-box;}
+
+  /* ---- minimal fixed chrome (top-left brand + status) ---- */
+  .rv-bar{
+    position:fixed; top:18px; left:20px; z-index:50;
+    display:flex; align-items:center; gap:14px;
+    font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;
+    pointer-events:none;
+  }
+  .rv-mark{
+    background:#0a0a0a; color:#ece8d0;
+    font-weight:bold; font-size:15px; letter-spacing:.02em;
+    padding:9px 13px 8px; line-height:1; border-radius:2px;
+  }
+  .rv-meta{
+    display:flex; flex-direction:column; gap:2px;
+    color:#231f20;
+  }
+  .rv-meta b{font-size:12.5px; font-weight:bold; letter-spacing:.04em;}
+  .rv-meta span{
+    font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+    font-weight:bold; opacity:.5;
+  }
+
+  /* ---- top-right actions ---- */
+  .rv-actions{
+    position:fixed; top:18px; right:20px; z-index:50;
+    display:flex; gap:8px;
+    font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;
+  }
+  .rv-actions a{
+    display:inline-flex; align-items:center; gap:7px;
+    background:#fff; color:#231f20; text-decoration:none;
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:bold;
+    padding:9px 13px; border-radius:2px;
+    box-shadow:0 1px 3px rgba(0,0,0,.10),0 2px 10px rgba(0,0,0,.05);
+    transition:background .14s,color .14s;
+  }
+  .rv-actions a:hover{background:#0a0a0a; color:#ece8d0;}
+  .rv-actions a .arr{font-size:13px;}
+
+  /* ---- bottom-left copyright rule, on-brand ---- */
+  .rv-foot{
+    position:fixed; bottom:16px; left:20px; z-index:50;
+    font-family:"Trebuchet MS","Segoe UI",Tahoma,sans-serif;
+    font-size:10px; letter-spacing:.22em; text-transform:uppercase;
+    font-weight:bold; color:#231f20; opacity:.4; pointer-events:none;
+  }
+
+  /* the live site inside each artboard frame */
+  .rv-frame{
+    width:100%; height:100%; border:0; display:block;
+    background:#0a0a0a;
+    pointer-events:none;            /* let the canvas pan/zoom over the frame */
+  }
+</style>
+</head>
+<body>
+
+<div class="rv-bar">
+  <div class="rv-mark">WYT</div>
+  <div class="rv-meta">
+    <b>Website — Design Review</b>
+    <span>[ Final for sign-off · 2025 ]</span>
+  </div>
+</div>
+
+<div class="rv-actions">
+  <a href="index.html" target="_blank" rel="noopener">Open live site <span class="arr">&#8599;</span></a>
+</div>
+
+<div class="rv-foot">// ALL DESIGN COPYRIGHTS RESERVED TO WYT DESIGNS · &copy;</div>
+
+<div id="root"></div>
+
+<template id="__bundler_thumbnail">
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="#0a0a0a"/>
+    <text x="50" y="60" font-family="Trebuchet MS, sans-serif" font-size="30" font-weight="bold" fill="#ece8d0" text-anchor="middle">WYT</text>
+  </svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="design-canvas.jsx"></script>
+
+<script type="text/babel">
+  const { useEffect, useRef } = React;
+
+  // Full-page heights measured from the live site at each width.
+  // Page heights measured with the hero capped to a natural viewport height
+  // (the site's hero is min-height:100vh, which would otherwise balloon to
+  // the full frame height and create a feedback loop).
+  const DESK_W = 1440, DESK_H = 13340, DESK_HERO = 900;
+  const MOB_W  = 390,  MOB_H  = 18760, MOB_HERO = 844;
+
+  // Pre-seed the canvas viewport so the client lands fitted to the frames
+  // (instead of zoomed into the top-left at 100%). Only if not already saved.
+  (function seedViewport(){
+    const key = 'dc-viewport:' + location.pathname;
+    if (localStorage.getItem(key)) return;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const worldW = 60 + DESK_W + 48 + MOB_W + 60;     // section padding + both frames
+    const scale = Math.min((vw - 80) / worldW, 0.62);
+    const x = Math.max(24, (vw - worldW * scale) / 2);
+    const y = Math.max(96, vh * 0.12);
+    localStorage.setItem(key, JSON.stringify({ x, y, scale }));
+  })();
+
+  // Force every frame to show its finished state: reveal animations settled,
+  // counters at final value, no lazy images left unloaded (the frame sits
+  // off-screen so the browser would otherwise defer them).
+  function primeFrame(iframe, heroH){
+    let tries = 0;
+    const prime = () => {
+      let d;
+      try { d = iframe.contentDocument; } catch(e){ return; }
+      if (!d || !d.body){ if (tries++ < 40) setTimeout(prime, 150); return; }
+      // Cap the 100vh hero to a natural viewport height so the page lays out
+      // at its real length instead of stretching to fill the tall frame.
+      let st = d.getElementById('rv-fit');
+      if (!st){ st = d.createElement('style'); st.id = 'rv-fit'; d.head.appendChild(st); }
+      st.textContent = '.hero{min-height:' + heroH + 'px !important}';
+      d.querySelectorAll('.reveal').forEach(r => r.classList.add('in'));
+      d.querySelectorAll('[data-count]').forEach(el => {
+        const t = el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '';
+        el.innerHTML = t + '<span class="suf">' + suf + '</span>';
+      });
+      d.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; });
+    };
+    prime();
+    setTimeout(prime, 1200);
+    setTimeout(prime, 2600);
+  }
+
+  function Frame({ src, heroH }){
+    const ref = useRef(null);
+    useEffect(() => {
+      const f = ref.current;
+      if (!f) return;
+      const onload = () => primeFrame(f, heroH);
+      f.addEventListener('load', onload);
+      if (f.contentDocument && f.contentDocument.readyState === 'complete') primeFrame(f, heroH);
+      return () => f.removeEventListener('load', onload);
+    }, []);
+    return <iframe ref={ref} className="rv-frame" src={src} scrolling="no" tabIndex={-1} title="WYT website preview" />;
+  }
+
+  function App(){
+    return (
+      <DesignCanvas minScale={0.04} maxScale={2}>
+        <DCSection id="wyt-site" title="WYT — Website" subtitle="Final design · responsive · desktop &amp; mobile">
+          <DCArtboard id="desktop" label="Desktop · 1440px" width={DESK_W} height={DESK_H}>
+            <Frame src="index.html?view=desktop" heroH={DESK_HERO} />
+          </DCArtboard>
+          <DCArtboard id="mobile" label="Mobile · 390px" width={MOB_W} height={MOB_H}>
+            <Frame src="index.html?view=mobile" heroH={MOB_HERO} />
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
